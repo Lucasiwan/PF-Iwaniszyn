@@ -1,0 +1,283 @@
+@charset "UTF-8";
+/** colores SCSS **/
+/** MIXINS **/
+@keyframes Anim-fondo {
+  0% {
+    background-position: center top;
+    background-size: 100%;
+  }
+  100% {
+    background-position: center top;
+    background-size: 150%;
+  }
+}
+@keyframes Logo-ppl {
+  0% {
+    transform: scale(2);
+    transform-origin: 50% 0%;
+  }
+  100% {
+    transform: scale(1);
+    transform-origin: 50% 0%;
+  }
+}
+@keyframes buttonmov {
+  0% {
+    animation-timing-function: ease-out;
+    transform: scale(1);
+    transform-origin: center center;
+  }
+  10% {
+    animation-timing-function: ease-in;
+    transform: scale(0.91);
+  }
+  17% {
+    animation-timing-function: ease-out;
+    transform: scale(0.98);
+  }
+  33% {
+    animation-timing-function: ease-in;
+    transform: scale(0.87);
+  }
+  45% {
+    animation-timing-function: ease-out;
+    transform: scale(1);
+  }
+}
+/** logo principal **/
+.ALOGO {
+  margin-top: 5rem;
+}
+
+.Animacion-logo {
+  animation: Logo-ppl 1s ease 0s 1 normal forwards;
+}
+
+/** layout GRID  (index/servicios/info) **/
+.layout {
+  width: 100%;
+  height: 1080px;
+  display: grid;
+  grid: "header" auto "main" auto "footer" auto/auto;
+  gap: 8px;
+}
+
+.header {
+  grid-area: header;
+}
+
+.main {
+  grid-area: main;
+  text-align: center;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+/** ajuste de fotos index **/
+.fotos {
+  width: 1366px;
+  height: 768px;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+
+/** cuerpo de pagina **/
+body {
+  background-color: rgb(61, 118, 194);
+  max-width: 100%;
+}
+
+/** imagen S principal **/
+#imagen {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 2%;
+}
+
+/** Formulario de CONTACTO **/
+.formulario {
+  width: 500px;
+  margin: 0 auto;
+  text-align: left;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.formulario label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.formulario input,
+.formulario textarea {
+  width: 100%;
+  padding: 12px 20px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+.formulario input[type=submit] {
+  background-color: #4caf50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.formulario input[type=submit]:hover {
+  animation: buttonmov 10s ease 0s 1 normal forwards;
+  background-color: #4caf50;
+}
+
+/** imagen contacto **/
+#contacto-fondo {
+  background-image: url(../images/saludo.webp);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  animation: Anim-fondo 6s ease 0s 1 normal forwards;
+}
+
+/** texto color blanco**/
+#contacto-text {
+  color: white;
+}
+
+.titulo {
+  margin-top: 3.8rem;
+  margin-bottom: 1.9rem;
+}
+
+body {
+  font: 100%;
+}
+
+/** imagen index **/
+#index-fondo {
+  background-image: url(../images/generación\ de\ energía.webp);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  animation: Anim-fondo 6s ease 0s 1 normal forwards;
+}
+
+/** imagen Componentes **/
+#materiales-fondo {
+  background-image: url(../images/solar.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  animation: Anim-fondo 6s ease 0s 1 normal forwards;
+}
+
+/** imagen Servicios **/
+#servicios-fondo {
+  background-image: url(../images/ensayo1.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  animation: Anim-fondo 6s ease 0s 1 normal forwards;
+}
+
+/** imagen +info **/
+#info-fondo {
+  background-image: url(../images/proyecto.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  animation: Anim-fondo 6s ease 0s 1 normal forwards;
+}
+
+/** flex servicios **/
+.layout-flex-serv {
+  display: flex;
+  gap: 20px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.layout-flex-info {
+  display: flex;
+  gap: 400px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/** color de botones **/
+a.color-button {
+  background-color: rgb(84, 38, 124);
+  border-color: rgb(84, 38, 124);
+}
+
+a.color-button:hover {
+  background-color: rgb(129, 62, 187);
+  border-color: rgb(84, 38, 124);
+}
+
+/** Color Navbar **/
+.droplist {
+  background-color: rgb(129, 62, 187);
+}
+
+.buttonlist {
+  background-color: #4caf50;
+}
+
+.backnav {
+  background-color: rgb(21, 34, 105);
+}
+
+.backnav-list {
+  background-color: rgb(45, 54, 107);
+}
+
+.button-nav {
+  background-color: rgb(15, 180, 97);
+}
+
+/** tamaño de imagenes **/
+.img-width-5 {
+  width: 8rem;
+}
+
+.img-width-18 {
+  width: 18rem;
+}
+
+.img-width-25 {
+  width: 25rem;
+}
+
+.img-width-height-25 {
+  width: 25rem;
+  height: 20rem;
+}
+
+.img-info {
+  width: 25rem;
+  height: 10rem;
+}
+
+/** margener automaticos **/
+.margin-auto {
+  margin: auto;
+}
+
+/*# sourceMappingURL=styles.css.map */
